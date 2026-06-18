@@ -3,13 +3,11 @@
 
 A Flutter plugin for monitoring real-time upload and download network speed using Android TrafficStats and iOS network APIs.
 
-## Screenshots
+## Screenshot
 
 ## Screenshot
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bvkbbflutter/network_speed_plus/main/assets/screenshot.png" width="350" alt="Network Speed Plus Demo">
-</p>
+![Network Speed Plus](assets/network_speed_plus.png)
 
 ## Features
 
