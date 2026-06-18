@@ -1,6 +1,6 @@
 name: network_speed_plus
 description: A Flutter plugin for monitoring network speed (download/upload) on Android and iOS. Simple, lightweight, and pure Dart.
-version: 1.0.0
+version: 1.0.4
 homepage: https://github.com/bvkbbflutter/network_speed_plus
 repository: https://github.com/bvkbbflutter/network_speed_plus
 issue_tracker: https://github.com/bvkbbflutter/network_speed_plus/issues
