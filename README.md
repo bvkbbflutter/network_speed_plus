@@ -5,7 +5,7 @@ A Flutter plugin for monitoring real-time upload and download network speed on A
 ## Screenshot
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bvkbbflutter/network_speed_plus/main/assets/network_speed_plus.png" width="350" alt="Network Speed Plus">
+  <img src="https://raw.githubusercontent.com/bvkbbflutter/network_speed_plus/main/assets/network_speed_plus.png" alt="Network Speed Plus">
 </p>
 
 ## Features
