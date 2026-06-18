@@ -17,3 +17,7 @@ A Flutter plugin for monitoring real-time upload and download network speed on A
 - ✅ Lightweight & Efficient
 - ✅ Android & iOS Support
 - ✅ Easy-to-use API
+
+## Source Code
+
+[GitHub Repository](https://github.com/bvkbbflutter/network_speed_plus)
