@@ -6,6 +6,8 @@ class SpeedDisplay extends StatelessWidget {
   final bool showLabels;
   final bool showMode;
   final bool showInterval;
+  final bool displayDownload;
+  final bool displayUpload;
   final double fontSize;
   final MainAxisAlignment alignment;
   final EdgeInsets padding;
@@ -15,6 +17,8 @@ class SpeedDisplay extends StatelessWidget {
     this.showLabels = true,
     this.showMode = true,
     this.showInterval = true,
+    this.displayDownload = true,
+    this.displayUpload = true,
     this.fontSize = 16,
     this.alignment = MainAxisAlignment.center,
     this.padding = const EdgeInsets.all(16),
@@ -73,35 +77,39 @@ class SpeedDisplay extends StatelessWidget {
       child: Column(
         children: [
           if (showLabels) ...[
-            _buildSpeedRow(
-              icon: Icons.arrow_downward,
-              label: 'Download',
-              speed: data.downloadSpeed,
-              color: Colors.green,
-              fontSize: fontSize,
-            ),
+            if (displayDownload)
+              _buildSpeedRow(
+                icon: Icons.arrow_downward,
+                label: 'Download',
+                speed: data.downloadSpeed,
+                color: Colors.green,
+                fontSize: fontSize,
+              ),
             const SizedBox(height: 12),
-            _buildSpeedRow(
-              icon: Icons.arrow_upward,
-              label: 'Upload',
-              speed: data.uploadSpeed,
-              color: Colors.orange,
-              fontSize: fontSize,
-            ),
+            if (displayUpload)
+              _buildSpeedRow(
+                icon: Icons.arrow_upward,
+                label: 'Upload',
+                speed: data.uploadSpeed,
+                color: Colors.orange,
+                fontSize: fontSize,
+              ),
           ] else ...[
-            _buildSpeedRowCompact(
-              icon: Icons.arrow_downward,
-              speed: data.downloadSpeed,
-              color: Colors.green,
-              fontSize: fontSize,
-            ),
+            if (displayDownload)
+              _buildSpeedRowCompact(
+                icon: Icons.arrow_downward,
+                speed: data.downloadSpeed,
+                color: Colors.green,
+                fontSize: fontSize,
+              ),
             const SizedBox(height: 4),
-            _buildSpeedRowCompact(
-              icon: Icons.arrow_upward,
-              speed: data.uploadSpeed,
-              color: Colors.orange,
-              fontSize: fontSize,
-            ),
+            if (displayUpload)
+              _buildSpeedRowCompact(
+                icon: Icons.arrow_upward,
+                speed: data.uploadSpeed,
+                color: Colors.orange,
+                fontSize: fontSize,
+              ),
           ],
           if (showMode || showInterval) ...[
             const SizedBox(height: 8),

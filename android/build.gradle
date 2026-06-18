@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("com.android.tools.build:gradle:8.2.2")
     }
 }
 
@@ -35,20 +35,85 @@ android {
 
     defaultConfig {
         minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/java"
     }
 
     dependencies {
-        testImplementation("junit:junit:4.13.2")
-        testImplementation("org.mockito:mockito-core:5.0.0")
+        implementation "androidx.annotation:annotation:1.7.0"
+        
+        testImplementation "junit:junit:4.13.2"
+        testImplementation "org.mockito:mockito-core:5.0.0"
+        testImplementation "androidx.test:core:1.5.0"
     }
 
     testOptions {
         unitTests.all {
             testLogging {
-               events "passed", "skipped", "failed", "standardOut", "standardError"
-               outputs.upToDateWhen {false}
-               showStandardStreams = true
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                outputs.upToDateWhen { false }
+                showStandardStreams = true
             }
         }
     }
 }
+
+// group = "com.vinay.network_speed_plus"
+// version = "1.0"
+
+// buildscript {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+
+//     dependencies {
+//         classpath("com.android.tools.build:gradle:8.1.0")
+//     }
+// }
+
+// rootProject.allprojects {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+// }
+
+// apply plugin: "com.android.library"
+
+// android {
+//     if (project.android.hasProperty("namespace")) {
+//         namespace = "com.vinay.network_speed_plus"
+//     }
+
+//     compileSdk = 34
+
+//     compileOptions {
+//         sourceCompatibility = JavaVersion.VERSION_1_8
+//         targetCompatibility = JavaVersion.VERSION_1_8
+//     }
+
+//     defaultConfig {
+//         minSdk = 21
+//     }
+
+//     dependencies {
+//         testImplementation("junit:junit:4.13.2")
+//         testImplementation("org.mockito:mockito-core:5.0.0")
+//     }
+
+//     testOptions {
+//         unitTests.all {
+//             testLogging {
+//                events "passed", "skipped", "failed", "standardOut", "standardError"
+//                outputs.upToDateWhen {false}
+//                showStandardStreams = true
+//             }
+//         }
+//     }
+// }
